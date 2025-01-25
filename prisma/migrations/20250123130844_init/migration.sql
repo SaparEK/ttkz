@@ -1,8 +1,0 @@
--- CreateTable
-CREATE TABLE "User" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
-    "phone" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "is_finished" BOOLEAN NOT NULL DEFAULT false
-);
