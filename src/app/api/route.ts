@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import prisma from "../lib/prisma"; // Убедитесь, что Prisma клиент настроен
+// import prisma from "../lib/prisma"; // Убедитесь, что Prisma клиент настроен
 export async function POST(request: Request) {
     try{
         const body = await request.json();
@@ -7,16 +7,16 @@ export async function POST(request: Request) {
         if (!name || !phone) {
             return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
         }
-        const newUser = await prisma.user.create({
-            data: {
-                name,
-                phone,
-            },
-        });
+        // const newUser = await prisma.user.create({
+        //     data: {
+        //         name,
+        //         phone,
+        //     },
+        // });
         // Возвращаем ответ с сохранёнными данными
         await sendMessage('1022603049', 'Его номер телефона: '+phone);
 
-        return NextResponse.json(newUser, { status: 201 });
+        // return NextResponse.json(newUser, { status: 201 });
     } catch (error) {
         console.error("Error saving data:", error);
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
