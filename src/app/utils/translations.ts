@@ -5,7 +5,7 @@ type Translations = {
 };
 export const translations: Translations = {
     en: {
-        title: 'TTKZ|tuotuokz',
+        title: 'Tuo Tuo kz',
         about: "About Us",
         services: "Services",
         contact: "Contacts",
@@ -61,7 +61,7 @@ export const translations: Translations = {
 
     },
     ru: {
-        title: 'TTKZ|tuotuokz',
+        title: 'Tuo Tuo kz',
         about: "О нас",
         services: "Услуги",
         contact: "Контакты",

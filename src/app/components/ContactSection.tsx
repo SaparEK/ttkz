@@ -17,18 +17,18 @@ const Contacts = () => {
             <a href="tel:+78001234567" className="glass-card p-8 rounded-xl text-center hover:shadow-lg transition-all hover:scale-105">
               <Phone className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">{t('phone')}</h3>
-              <p className="text-neutral-600">+7 (800) 123-45-67</p>
+              <p className="text-neutral-600">+7 (800) 000-00-00</p>
             </a>
             <a href="mailto:info@logisticspro.ru" className="glass-card p-8 rounded-xl text-center hover:shadow-lg transition-all hover:scale-105">
               <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">Email</h3>
-              <p className="text-neutral-600">info@logisticspro.ru</p>
+              <p className="text-neutral-600">ttkztuotuokz@gmaol.com</p>
             </a>
             <div className="glass-card p-8 rounded-xl text-center hover:shadow-lg transition-all hover:scale-105">
               <MessageCircle className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">{t('socialMedia')}</h3>
               <div className="flex justify-center gap-4">
-                <a href="https://t.me/logisticspro" className="text-neutral-600 hover:text-accent transition-colors">
+                <a href="https://t.me/tuotuokz_bot" className="text-neutral-600 hover:text-accent transition-colors">
                   {t('telegram')}
                 </a>
                 <a href="https://wa.me/78001234567" className="text-neutral-600 hover:text-accent transition-colors">
