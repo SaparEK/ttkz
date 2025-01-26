@@ -22,7 +22,7 @@ const Contacts = () => {
             <a href="mailto:info@logisticspro.ru" className="glass-card p-8 rounded-xl text-center hover:shadow-lg transition-all hover:scale-105">
               <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
               <h3 className="font-semibold text-xl mb-2">Email</h3>
-              <p className="text-neutral-600">ttkztuotuokz@gmaol.com</p>
+              <p className="text-neutral-600">ttkztuotuokz@gmail.com</p>
             </a>
             <div className="glass-card p-8 rounded-xl text-center hover:shadow-lg transition-all hover:scale-105">
               <MessageCircle className="w-8 h-8 text-accent mx-auto mb-4" />
