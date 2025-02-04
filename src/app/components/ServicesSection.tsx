@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-import { Package, Truck, Plane, Ship } from "lucide-react";
+import { Package, Truck} from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../utils/translations";
 

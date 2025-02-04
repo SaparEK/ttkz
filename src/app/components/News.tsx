@@ -29,6 +29,7 @@ const News = () => {
 
                 const data: NewsItem[] = await response.json();
                 setNews(data);
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
             } catch (err) {
                 setError("Не удалось загрузить новости.");
             } finally {
