@@ -1,8 +1,8 @@
 'use client';
 import { motion } from "framer-motion";
 import { Package, Truck, Plane, Ship } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/utils/translations";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../utils/translations";
 
 const ServicesSection = () => {
   const { language } = useLanguage();
@@ -13,16 +13,6 @@ const ServicesSection = () => {
       icon: Truck,
       title: t.roadFreight,
       description: t.roadFreightDesc,
-    },
-    {
-      icon: Plane,
-      title: t.airFreight,
-      description: t.airFreightDesc,
-    },
-    {
-      icon: Ship,
-      title: t.seaFreight,
-      description: t.seaFreightDesc,
     },
     {
       icon: Package,
@@ -45,7 +35,7 @@ const ServicesSection = () => {
           <div className="w-20 h-1 bg-accent mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

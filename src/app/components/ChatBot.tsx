@@ -1,11 +1,10 @@
 'use client';
-import React, { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useLanguage } from "@/contexts/LanguageContext";
-import {useIsMobile} from "@/hooks/use-mobile";
-import { handleOpenAIResponse } from "@/utils/openAi"; // Укажите правильный путь
-
+import React, {useState, useEffect, useRef} from "react";
+import {Button} from "./ui/button";
+import {Input} from "./ui/input";
+import {useLanguage} from "../contexts/LanguageContext";
+import {useIsMobile} from "../hooks/use-mobile";
+import {handleOpenAIResponse} from "../utils/openAi"; // Укажите правильный путь
 interface Message {
     text: string;
     isBot: boolean;
@@ -15,7 +14,7 @@ interface Message {
 
 const Chatbot = () => {
     const {t} = useLanguage();
-    const { language } = useLanguage();
+    const {language} = useLanguage();
     const isMobile = useIsMobile();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -23,10 +22,10 @@ const Chatbot = () => {
     const [userInput, setUserInput] = useState("");
     const [currentStep, setCurrentStep] = useState<"initial" | "name" | "phone" | "chatgpt" | "complete">("initial");
     const messagesEndRef = useRef<HTMLDivElement>(null);
-
+    const [userName, setUserName] = useState("");
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        messagesEndRef.current?.scrollIntoView({behavior: "smooth"});
     };
 
     const saveUserData = async (name: string, phone: string) => {
@@ -36,7 +35,7 @@ const Chatbot = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ name, phone }),
+                body: JSON.stringify({name, phone}),
             });
 
             if (!response.ok) {
@@ -78,7 +77,7 @@ const Chatbot = () => {
     const handleUserInput = async (input: string) => {
         if (!input.trim()) return;
 
-        setMessages((prev) => [...prev, { text: input, isBot: false }]);
+        setMessages((prev) => [...prev, {text: input, isBot: false}]);
         setUserInput(""); // Очищаем строку ввода
         setIsTyping(true);
         if (currentStep === "chatgpt") {
@@ -90,7 +89,7 @@ const Chatbot = () => {
                     setIsTyping(false);
                     setMessages((prev) => [
                         ...prev,
-                        { text: botResponse, isBot: true },
+                        {text: botResponse, isBot: true},
                     ]);
                 }, 500);
             } catch {
@@ -98,7 +97,7 @@ const Chatbot = () => {
                     setIsTyping(false);
                     setMessages((prev) => [
                         ...prev,
-                        { text: "Извините, произошла ошибка. Попробуйте ещё раз.", isBot: true },
+                        {text: "Извините, произошла ошибка. Попробуйте ещё раз.", isBot: true},
                     ]);
                 }, 500);
             }
@@ -108,7 +107,8 @@ const Chatbot = () => {
         if (currentStep === "name") {
             setTimeout(() => {
                 setIsTyping(false);
-                setMessages((prev) => [...prev, { text: t('chat_askPhone'), isBot: true }]);
+                setMessages((prev) => [...prev, {text: t('chat_askPhone'), isBot: true}]);
+                setUserName(input);
                 setCurrentStep("phone");
                 setUserInput("");
             }, 500);
@@ -119,18 +119,18 @@ const Chatbot = () => {
             if (!validatePhone(input)) {
                 setTimeout(() => {
                     setIsTyping(false);
-                    setMessages((prev) => [...prev, { text: t('chat_invalidPhone'), isBot: true }]);
+                    setMessages((prev) => [...prev, {text: t('chat_invalidPhone'), isBot: true}]);
                 }, 500);
                 return;
             }
             setTimeout(() => {
                 setIsTyping(false);
-                const userName = messages.find((msg) => !msg.isBot)?.text || "Unknown";
+                console.log(userName)
                 saveUserData(userName, input);
 
                 setMessages((prev) => [
                     ...prev,
-                    { text: t('chat_successMessage'), isBot: true },
+                    {text: t('chat_successMessage'), isBot: true},
                     {
                         text: t('welcome'),
                         isBot: true,
@@ -152,14 +152,14 @@ const Chatbot = () => {
     };
 
     const handleButtonClick = async (buttonText: string) => {
-        setMessages((prev) => [...prev, { text: buttonText, isBot: false }]);
+        setMessages((prev) => [...prev, {text: buttonText, isBot: false}]);
 
         if (buttonText === t('chat_buttons_contactOperator')) {
             setTimeout(() => {
                 setMessages((prev) => [
                     ...prev,
-                    { text: t('chat_consent'), isBot: true },
-                    { text: t('chat_askName'), isBot: true },
+                    {text: t('chat_consent'), isBot: true},
+                    {text: t('chat_askName'), isBot: true},
                 ]);
                 setCurrentStep("name");
             }, 500);
@@ -172,7 +172,7 @@ const Chatbot = () => {
             setTimeout(() => {
                 setMessages((prev) => [
                     ...prev,
-                    { text: t('chat_askQuestion'), isBot: true }, // Спрашиваем: Какие у вас вопросы?
+                    {text: t('chat_askQuestion'), isBot: true}, // Спрашиваем: Какие у вас вопросы?
                 ]);
             }, 500);
         }
@@ -188,8 +188,14 @@ const Chatbot = () => {
                 bg-white
             `}
                 >
-                    <div className="bg-primary p-4 text-white rounded-t-2xl">
-                        <h3 className="font-semibold">{t('chat_title')}</h3>
+                    <div className=" p-4 bg-[#D1CFCF] text-white rounded-t-2xl">
+                        <h3 className="font-semibold ">{t('chat_title')}</h3>
+                        <Button
+                            onClick={() => setIsOpen(false)}
+                            className="absolute top-2 right-2 text-white bg-transparent hover:bg-gray-200 hover:text-gray-700 rounded-full w-8 h-8 flex items-center justify-center"
+                        >
+                            ✖
+                        </Button>
                     </div>
                     <div className="flex-1 overflow-y-auto p-4 space-y-4">
                         {messages.map((message, index) => (
@@ -208,7 +214,7 @@ const Chatbot = () => {
                                             {message.buttons.map((button, idx) => (
                                                 <Button
                                                     key={idx}
-                                                    className="w-full transition-transform hover:scale-105 bg-[#8989DE] text-[#ffffff]"
+                                                    className="w-full transition-transform  hover:scale-105 bg-neutral-600 text-[#ffffff] rounded-full shadow-lg"
                                                     onClick={() => handleButtonClick(button)}
                                                 >
                                                     {button}
@@ -220,7 +226,7 @@ const Chatbot = () => {
                             </div>
                         ))}
                         {isTyping && (
-                            <div className="flex justify-start animate-fade-in">
+                            <div className="flex justify-start animate-fade-in ">
                                 <div className="bg-gray-100 rounded-xl p-3">
                                     <p>{t('chat_typing')}</p>
                                 </div>
@@ -228,7 +234,7 @@ const Chatbot = () => {
                         )}
                         <div ref={messagesEndRef}/>
                     </div>
-                    <div className="p-4 border-t bg-gray-100 rounded-b-2xl">
+                    <div className="p-4 border-t bg-gray-100 rounded-b-2xl ">
                         <div className="flex space-x-2">
                             <Input
                                 value={userInput}
@@ -239,11 +245,11 @@ const Chatbot = () => {
                                     }
                                 }}
                                 placeholder={t('chat_placeholder')}
-                                className="flex-1"
+                                className="flex-1 rounded-full shadow-lg"
                             />
                             <Button
                                 onClick={() => userInput.trim() && handleUserInput(userInput.trim())}
-                                className="transition-transform hover:scale-105"
+                                className="transition-transform hover:scale-105 rounded-full shadow-lg"
                             >
                                 {t('chat_send')}
                             </Button>
@@ -251,12 +257,14 @@ const Chatbot = () => {
                     </div>
                 </div>
             )}
-            <Button
-                onClick={() => setIsOpen(!isOpen)}
-                className="rounded-full w-12 h-12 shadow-lg transition-transform hover:scale-105"
-            >
-                {isOpen ? "×" : "💬"}
-            </Button>
+            {!isOpen && (
+                <Button
+                    onClick={() => setIsOpen(true)}
+                    className="fixed bottom-4 right-4 rounded-full w-12 h-12 shadow-lg transition-transform hover:scale-105"
+                >
+                    💬
+                </Button>
+            )}
         </div>
     );
 };

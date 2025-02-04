@@ -1,8 +1,8 @@
 'use client';
-import { Accordion, AccordionContent, AccordionItem,    AccordionTrigger,} from "@/components/ui/accordion";
-import {useLanguage} from "@/contexts/LanguageContext";
-import {translations} from "@/utils/translations";
-import {faqAnswers, faqQuestions} from "@/utils/companyInfo";
+import { Accordion, AccordionContent, AccordionItem,    AccordionTrigger,} from "./ui/accordion";
+import {useLanguage} from "../contexts/LanguageContext";
+import {translations} from "../utils/translations";
+import {faqAnswers, faqQuestions} from "../utils/companyInfo";
 
 const FAQ = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks

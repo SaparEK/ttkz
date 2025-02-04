@@ -1,7 +1,7 @@
 'use client';
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import {LanguageSwitcher} from "./LanguageSwitcher";
 
 const Header = () => {
@@ -45,6 +45,18 @@ const Header = () => {
                         className="text-neutral-400 hover:text-white transition-colors"
                     >
                         {t('faq')}
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('feedback')}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                    >
+                        {t('feedback')}
+                    </button>
+                    <button
+                        onClick={() => scrollToSection('news')}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                    >
+                        {t('news')}
                     </button>
                     <button
                         onClick={() => scrollToSection('contact')}

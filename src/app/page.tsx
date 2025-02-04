@@ -8,6 +8,8 @@ import FAQ from "./components/FAQ";
 import ChatBot from "./components/ChatBot";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Testimonials from "./components/Testimonials";
+import News from "./components/News";
 export default function Home() {
     return (
         <LanguageProvider>
@@ -19,6 +21,8 @@ export default function Home() {
                 <AboutSection/>
                 <ServicesSection/>
                 <FAQ/>
+                <Testimonials />
+                <News/>
                 <ContactSection/>
                 <Footer/>
                 <ChatBot/>

@@ -1,12 +1,13 @@
 'use client';
-import { companyInfo, faqAnswers, faqQuestions} from "@/utils/companyInfo";
-import { translations} from "@/utils/translations";
+import { companyInfo, faqAnswers, faqQuestions} from "./companyInfo";
+import { translations} from "./translations";
 const handleOpenAIResponse = async (message: string, language: string) => {
+  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer `,
+        Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
