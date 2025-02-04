@@ -6,7 +6,6 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL, // Используй переменную окружения
 });
 export async function POST(request: Request) {
-    try {
         const body = await request.json();
         const { name, phone } = body;
 
@@ -32,10 +31,6 @@ export async function POST(request: Request) {
         }
 
         return NextResponse.json(newUser, { status: 201 });
-    } catch (error) {
-        console.error("Error saving data:", error);
-        return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
-    }
 }
 
 const sendMessage = async (chatId: string, message:string) => {
