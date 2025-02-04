@@ -42,6 +42,7 @@ export async function GET() {
             });
 
         return NextResponse.json(filteredNews.length ? filteredNews : { message: "Нет подходящих новостей" });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
         return NextResponse.json({ error: "Ошибка загрузки новостей" }, { status: 500 });
     }
