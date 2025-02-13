@@ -69,14 +69,13 @@ const News = () => {
     }
 
     return (
-        <section className="py-16 bg-forest">
+        <section id="news" className="py-16 bg-forest">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         {t('news')}
                     </h2>
                 </div>
-                <h2 className="text-4xl font-bold text-white mb-8">Latest News</h2>
                 <ScrollArea className="h-[500px] rounded-md border border-mint/20">
                     <div className="p-4 space-y-4">
                         {loading ? (

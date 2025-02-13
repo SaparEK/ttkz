@@ -46,7 +46,7 @@ const Contacts = () => {
                     {t('telegram')}
                   </a>
                   <a
-                      href="https://wa.me/78001234567"
+                      href="https://api.whatsapp.com/send?phone=15551421895&text=start"
                       className="text-neutral-600 hover:text-accent transition-colors"
                   >
                     {t('whatsApp')}

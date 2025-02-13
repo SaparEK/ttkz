@@ -24,7 +24,7 @@ const Header = () => {
             <nav className="container-padding mx-auto flex h-16 items-center justify-between">
                 <a href="#" className="text-xl font-semibold text-white flex items-center gap-2">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/lovable-uploads/logotype(1).png" alt="Logo" className="h-20 w-auto" />
+                    <img src="/lovable-uploads/logotype_new_white.png" alt="Logo" className="h-10" />
                 </a>
 
                 <div className="hidden md:flex items-center gap-8">
@@ -52,12 +52,12 @@ const Header = () => {
                     >
                         {t('feedback')}
                     </button>
-                    <button
-                        onClick={() => scrollToSection('news')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('news')}
-                    </button>
+                    {/*<button*/}
+                    {/*    onClick={() => scrollToSection('news')}*/}
+                    {/*    className="text-neutral-400 hover:text-white transition-colors"*/}
+                    {/*>*/}
+                    {/*    {t('news')}*/}
+                    {/*</button>*/}
                     <button
                         onClick={() => scrollToSection('contact')}
                         className="text-neutral-400 hover:text-white transition-colors"

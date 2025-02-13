@@ -2,4 +2,4 @@
 /.idea
 /.next
 /prisma
-/.env
+.env

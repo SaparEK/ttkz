@@ -5,7 +5,7 @@ type Translations = {
 };
 export const translations: Translations = {
     en: {
-        title: 'Tuo Tuo kz',
+        title: 'TuoTuoKz',
         about: "About Us",
         services: "Services",
         contact: "Contacts",
@@ -64,14 +64,15 @@ export const translations: Translations = {
         firstFeedback:"We organized the delivery from Europe to Kazakhstan — everything is clear and transparent. No hidden fees. It is very convenient and reliable. Thank you for your professionalism!",
         secondFeedback:"We ordered the delivery of industrial equipment from Germany — your company did an excellent job! All documents were processed promptly, and the shipment arrived on time. Very convenient and professional!",
         thirdFeedback:"We worked with your Polish shipping company, and everything went smoothly and without delays. All the conditions were met. We recommend you as a reliable partner in international transportation!",
-        firstAuthor:"The Nana group",
-        secondAuthor:"Kairat Nurtas",
-        thirdAuthor:"N.А. Nazarbaev",
-        readMore:"Read more"
+        firstAuthor:"LLP \"Фуд Импорт\"",
+        secondAuthor:"LLP \"Уй Дамы\"",
+        thirdAuthor:"IE \"КС-Транс\"",
+        readMore:"Read more",
+        services_title:"Our Services"
 
     },
     ru: {
-        title: 'Tuo Tuo kz',
+        title: 'TuoTuoKz',
         about: "О нас",
         services: "Услуги",
         contact: "Контакты",
@@ -103,7 +104,7 @@ export const translations: Translations = {
         sendMessage: "Отправить сообщение",
         welcome: "👋 Здравствуйте! Чем могу помочь?",
         contactOperator: "Связаться с оператором",
-        faq: "Популярные вопросы",
+        faq: "FAQ",
         other: "Другое",
         consent: "Продолжая, вы даете согласие на обработку персональных данных.\n\nКак к вам обращаться?",
         enterPhone: "Введите, пожалуйста, номер телефона для связи:",
@@ -132,10 +133,11 @@ export const translations: Translations = {
         firstFeedback:"Организовали доставку из Европы в Казахстан — все четко и прозрачно. Никаких скрытых платежей. Очень удобно и надежно. Спасибо за профессионализм!",
         secondFeedback:"Заказали доставку промышленного оборудования из Германии — ваша компания справилась на отлично! Все документы были оформлены оперативно, груз пришел точно в срок. Очень удобно и профессионально!",
         thirdFeedback:"Работали с вашей компанией по доставке груза из Польши — все прошло гладко и без задержек. Все условия были соблюдены. Рекомендуем как надежного партнера в международных перевозках!",
-        firstAuthor:"Группа Нана",
-        secondAuthor:"Карат Нуртас",
-        thirdAuthor:"Н.А. Назарбаев",
+        firstAuthor:"ТОО \"Фуд Импорт\"",
+        secondAuthor:"ТОО \"Уй Дамы\"",
+        thirdAuthor:"ИП \"КС-Транс\"",
         readMore:"Больше информации",
+        services_title:"Наши услуги"
     }
 };
 

@@ -1,6 +1,8 @@
 'use client';
+
 import { motion } from "framer-motion";
-import { Package, Truck} from "lucide-react";
+import Image from "next/image";
+import { Package, Truck, Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../utils/translations";
 
@@ -8,51 +10,60 @@ const ServicesSection = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
-  const services = [
+  const rows = [
     {
-      icon: Truck,
+      image: "/lovable-uploads/cargo_service_1.jpg",
       title: t.roadFreight,
       description: t.roadFreightDesc,
+      reverse: false,
     },
     {
-      icon: Package,
+      image: "/lovable-uploads/cargo_service_2.jpg",
       title: t.warehousing,
       description: t.warehousingDesc,
+      reverse: true,
     },
+    {
+      image: "/lovable-uploads/cargo_service_3.jpg",
+      title: t.internationalNetwork,
+      description: t.networkDesc,
+      reverse: false,
+    }
   ];
 
   return (
-    <section id="services" className="py-20 bg-secondary">
-      <div className="container px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.services}</h2>
-          <div className="w-20 h-1 bg-accent mx-auto"></div>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="p-6 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
-            >
-              <service.icon className="w-12 h-12 text-accent mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">{service.title}</h3>
-              <p className="text-gray-600 text-center">{service.description}</p>
-            </motion.div>
-          ))}
+      <section id="services" className="py-20 bg-gray-200 flex flex-col items-center">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-[tilda-sans]-bold text-gray-900 mb-4">
+            {t.services_title}
+          </h2>
         </div>
-      </div>
-    </section>
+        <div className="container w-full grid grid-rows-3">
+          {rows.map((row, index) => (
+              <div
+                  key={index}
+                  className={`flex ${row.reverse ? 'flex-row-reverse' : 'flex-row'} w-full bg-white`}
+                  style={{border: index !== rows.length - 1 ? 'none' : '', margin: 0, padding: 0, height: '450px'}}
+              >
+                <Image
+                    src={row.image}
+                    alt={row.title}
+                    width={500}
+                    height={450}
+                    className="object-cover w-1/2 h-full"
+                />
+                <div className="w-1/2 text-center p-10 flex flex-col justify-center">
+                  <h3 className="text-[36px] font-bold mb-6 font-[tilda-sans]">
+                    {row.title}
+                  </h3>
+                  <p className="text-[#959595] text-lg font-[tilda-sans] leading-relaxed">
+                    {row.description}
+                  </p>
+                </div>
+            </div>
+            ))}
+        </div>
+      </section>
   );
 };
 

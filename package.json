@@ -1,5 +1,5 @@
 {
-  "name": "next",
+  "name": "ttkz",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -45,6 +45,7 @@
     "embla-carousel-react": "^8.5.2",
     "express": "^4.21.2",
     "framer-motion": "^12.0.1",
+    "gsap": "^3.12.7",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.473.0",
     "next": "15.1.6",
