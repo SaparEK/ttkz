@@ -1,10 +1,6 @@
 'use client';
 
-<<<<<<< HEAD
 // import { Truck } from "lucide-react";
-=======
-import { Truck } from "lucide-react";
->>>>>>> fcc29568cbd554ebd03fd64a667b3ba431a7f007
 import Image from "next/image";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
