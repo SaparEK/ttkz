@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image from "next/image";
-import { Package, Truck, Globe } from "lucide-react";
+// import { Package, Truck, Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../utils/translations";
 
