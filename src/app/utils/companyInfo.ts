@@ -1,9 +1,9 @@
 export const companyInfo = {
     ru: [
-        'TTKZ - логистическая компания, предоставляющая комплексные транспортные решения. Мы специализируемся на автомобильных перевозках, обеспечивая своевременную и эффективную доставку грузов по всему миру. Наша команда экспертов стремится удовлетворить уникальные потребности каждого клиента, предлагая индивидуальный сервис и поддержку на протяжении всего процесса доставки. Благодаря мощной партнерской сети и стремлению к совершенству,TTKZ является вашим надежным партнером в области логистики.'
+        'Tuo Tuo Kz - логистическая компания, предоставляющая комплексные транспортные решения. Мы специализируемся на автомобильных перевозках, обеспечивая своевременную и эффективную доставку грузов по всему миру. Наша команда экспертов стремится удовлетворить уникальные потребности каждого клиента, предлагая индивидуальный сервис и поддержку на протяжении всего процесса доставки. Благодаря мощной партнерской сети и стремлению к совершенству,TTKZ является вашим надежным партнером в области логистики.'
     ],
     en: [
-        `TTKZ is a logistics company that provides comprehensive transportation solutions. We specialize in road services, ensuring timely and efficient delivery of goods across the globe. Our team of experts is dedicated to meeting the unique needs of each client, offering personalized service and support throughout the shipping process. With a strong network of partners and a commitment to excellence, TTKZ is your trusted partner in logistics.`
+        `Tuo Tuo Kz is a logistics company that provides comprehensive transportation solutions. We specialize in road services, ensuring timely and efficient delivery of goods across the globe. Our team of experts is dedicated to meeting the unique needs of each client, offering personalized service and support throughout the shipping process. With a strong network of partners and a commitment to excellence, TTKZ is your trusted partner in logistics.`
     ]
 };
 

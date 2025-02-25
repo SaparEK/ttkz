@@ -24,7 +24,7 @@ export async function GET() {
                 )
             )
             .map((item) => {
-                const originalImage = item.media?.$?.url || "/placeholder.jpg";
+                const originalImage = item.media?.$?.url || "/placeholder_1.jpg";
 
                 // Пробуем создать `thumb_b`, если его нет — используем оригинал
                 const thumbImage = originalImage.replace("/photo_", "/thumb_b/photo_");

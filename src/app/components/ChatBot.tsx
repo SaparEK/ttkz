@@ -185,15 +185,14 @@ const Chatbot = () => {
                     className={`
                 w-[90vw] sm:w-[440px] flex flex-col border border-gray-300 shadow-lg rounded-2xl
                 ${isMobile ? "h-[80vh]" : "h-[600px]"}
-                bg-white
+                bg-white transition-all ease-in-out transform ${isOpen ? "scale-100 opacity-100" : "scale-90 opacity-0"}
             `}
                 >
-                    <div className=" p-4 bg-[#D1CFCF] text-white rounded-t-2xl">
-                        <h3 className="font-semibold ">{t('chat_title')}</h3>
+                    <div className=" p-4 bg-[#222222] text-white rounded-t-2xl">
+                        <h3>{t('chat_title')}</h3>
                         <Button
                             onClick={() => setIsOpen(false)}
-                            className="absolute top-2 right-2 text-white bg-transparent hover:bg-gray-200 hover:text-gray-700 rounded-full w-8 h-8 flex items-center justify-center"
-                        >
+                            className="absolute top-2 right-2 text-white bg-transparent hover:bg-gray-200 hover:text-gray-700 rounded-full w-8 h-8 flex items-center justify-center"                        >
                             ✖
                         </Button>
                     </div>
@@ -260,9 +259,9 @@ const Chatbot = () => {
             {!isOpen && (
                 <Button
                     onClick={() => setIsOpen(true)}
-                    className="fixed bottom-4 right-4 rounded-full w-12 h-12 shadow-lg transition-transform hover:scale-105"
+                    className="fixed bottom-4 right-4 rounded-full w-12 h-12 transition-transform  hover:scale-105"
                 >
-                    💬
+                    🗨️
                 </Button>
             )}
         </div>

@@ -1,112 +1,84 @@
 'use client';
+
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
-import {LanguageSwitcher} from "./LanguageSwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const { t } = useLanguage();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
             setIsMenuOpen(false);
         }
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/90 backdrop-blur-lg border-b border-neutral-800">
-            <nav className="container-padding mx-auto flex h-16 items-center justify-between">
-                <a href="#" className="text-xl font-semibold text-white flex items-center gap-2">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/lovable-uploads/logotype_new_white.png" alt="Logo" className="h-10" />
-                </a>
+        <div className="container">
+            <header
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                    scrolled ? "bg-black py-2 shadow-lg" : "bg-transparent py-4"
+                }`}
+            >
+                <nav className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
+                    {/* Логотип */}
+                    <a href="#" className="text-xl font-semibold text-white flex items-center gap-2">
+                        <img src="/lovable-uploads/logotype_new_white.png" alt="Logo" className="h-8 md:h-10" />
+                    </a>
 
-                <div className="hidden md:flex items-center gap-8">
-                    <button
-                        onClick={() => scrollToSection('about')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('about')}
-                    </button>
-                    <button
-                        onClick={() => scrollToSection('services')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('services')}
-                    </button>
-                    <button
-                        onClick={() => scrollToSection('faq')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('faq')}
-                    </button>
-                    <button
-                        onClick={() => scrollToSection('feedback')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('feedback')}
-                    </button>
-                    {/*<button*/}
-                    {/*    onClick={() => scrollToSection('news')}*/}
-                    {/*    className="text-neutral-400 hover:text-white transition-colors"*/}
-                    {/*>*/}
-                    {/*    {t('news')}*/}
-                    {/*</button>*/}
-                    <button
-                        onClick={() => scrollToSection('contact')}
-                        className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                        {t('contact')}
-                    </button>
-                    <LanguageSwitcher/>
-                </div>
-
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    {isMenuOpen ? <X/> : <Menu/>}
-                </button>
-            </nav>
-
-            {isMenuOpen && (
-                <div className="md:hidden absolute top-16 left-0 right-0 bg-neutral-900/90 backdrop-blur-lg border-b border-neutral-800">
-                    <div className="container-padding py-4 flex flex-col gap-4">
-                        <button
-                            onClick={() => scrollToSection('about')}
-                            className="text-neutral-400 hover:text-white transition-colors text-left"
-                        >
-                            {t('about')}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('services')}
-                            className="text-neutral-400 hover:text-white transition-colors text-left"
-                        >
-                            {t('services')}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('faq')}
-                            className="text-neutral-400 hover:text-white transition-colors text-left"
-                        >
-                            {t('faq')}
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('contact')}
-                            className="text-neutral-400 hover:text-white transition-colors text-left"
-                        >
-                            {t('contact')}
-                        </button>
-                        <LanguageSwitcher/>
+                    {/* Навигация для десктопов */}
+                    <div className="hidden md:flex items-center gap-4">
+                        {["about", "services", "faq", "contact"].map((section) => (
+                            <button
+                                key={section}
+                                onClick={() => scrollToSection(section)}
+                                className="text-white hover:text-white transition-colors border border-transparent hover:border-white px-4 py-1 rounded-lg text-sm md:text-base"
+                            >
+                                {t(section)}
+                            </button>
+                        ))}
+                        <LanguageSwitcher />
                     </div>
-                </div>
-            )}
-        </header>
+
+                    {/* Кнопка меню для мобильных */}
+                    <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </nav>
+
+                {/* Мобильное меню */}
+                {isMenuOpen && (
+                    <div className="md:hidden absolute top-16 w-full bg-black/90 backdrop-blur-lg border-b border-neutral-800">
+                        <div className="px-4 lg:px-8 py-4 flex flex-col gap-4">
+                            {["about", "services", "faq", "contact"].map((section) => (
+                                <button
+                                    key={section}
+                                    onClick={() => scrollToSection(section)}
+                                    className="text-neutral-400 hover:text-white transition-colors border border-white px-4 py-2 rounded-lg text-left text-sm"
+                                >
+                                    {t(section)}
+                                </button>
+                            ))}
+                            <LanguageSwitcher />
+                        </div>
+                    </div>
+                )}
+            </header>
+        </div>
     );
 };
 

@@ -3,25 +3,25 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/ContactSection";
 import {LanguageProvider} from "./contexts/LanguageContext";
-import {LanguageSwitcher} from "./components/LanguageSwitcher";
 import FAQ from "./components/FAQ";
 import ChatBot from "./components/ChatBot";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Testimonials from "./components/Testimonials";
+import Location from "./components/LocationSection"
 // import News from "./components/News";
 export default function Home() {
     return (
         <LanguageProvider>
-            <div className="min-h-screen bg-neutral-50">
+            <div className="min-h-screen bg-neutral-50 font-hero">
                 <Header/>
                 {/*<Navbar />*/}
-                <LanguageSwitcher/>
                 <HeroSection/>
                 <AboutSection/>
                 <ServicesSection/>
-                <FAQ/>
                 <Testimonials />
+                <FAQ/>
+                <Location/>
                 {/*<News/>*/}
                 <ContactSection/>
                 <Footer/>

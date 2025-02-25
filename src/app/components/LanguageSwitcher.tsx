@@ -5,11 +5,14 @@ export const LanguageSwitcher = () => {
     const { language, setLanguage } = useLanguage();
 
     return (
-        <div className="flex items-center gap-2">            {/* Кнопка для русского языка */}
+        <div className="flex items-center gap-2">
+            {/* Кнопка для русского языка */}
             <button
                 onClick={() => setLanguage('ru')} // Устанавливаем язык при клике
-                className={`px-2 py-1 rounded transition-colors ${
-                    language === 'ru' ? 'bg-accent text-white' : 'text-neutral-400 hover:text-white'
+                className={`px-4 py-2 rounded transition-all duration-500 ease-in-out transform ${
+                    language === 'ru'
+                        ? 'bg-accent text-white scale-105' // При выбранном языке увеличиваем размер кнопки
+                        : 'text-neutral-400 hover:text-white hover:scale-105' // Эффект при наведении
                 }`}
             >
                 RU
@@ -18,8 +21,10 @@ export const LanguageSwitcher = () => {
             {/* Кнопка для английского языка */}
             <button
                 onClick={() => setLanguage('en')} // Устанавливаем язык при клике
-                className={`px-2 py-1 rounded transition-colors ${
-                    language === 'en' ? 'bg-accent text-white' : 'text-neutral-400 hover:text-white'
+                className={`px-4 py-2 rounded transition-all duration-300 ease-in-out transform ${
+                    language === 'en'
+                        ? 'bg-accent text-white scale-105' // При выбранном языке увеличиваем размер кнопки
+                        : 'text-neutral-400 hover:text-white hover:scale-105' // Эффект при наведении
                 }`}
             >
                 EN
@@ -27,4 +32,5 @@ export const LanguageSwitcher = () => {
         </div>
     );
 };
+
 

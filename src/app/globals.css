@@ -7,7 +7,7 @@
 
 /* Можно добавить свои кастомные стили */
 body {
-  font-family: 'Inter', sans-serif; /* Пример кастомного шрифта */
+  font-family: 'Hero', sans-serif; /* Пример кастомного шрифта */
 }
 #root {
   max-width: 1280px;
@@ -50,4 +50,78 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+/* Разделитель в виде прямоугольника с скошенной стороной */
+.divider {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Высота прямоугольника */
+  background-color: #000; /* Черный цвет фона */
+  margin: 30px 0; /* Отступы сверху и снизу */
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #000; /* Цвет для скошенной части (можно изменить) */
+  transform: skewY(-3deg); /* Скашиваем верхнюю часть прямоугольника */
+  transform-origin: top left;
+}
+
+/* Разделитель в виде прямоугольника с скошенной стороной */
+.divider-rectangle_two{
+  height: 200px;
+  background-color: #fff; /* Цвет разделителя */
+  margin-top: 100px; /* Отступы сверху и снизу */
+}
+.divider-rectangle_two::before {
+  background-color: #000; /* Цвет для скошенной части (можно изменить) */
+}
+/* Разделитель в виде прямоугольника с скошенной стороной */
+.divider-rectangle_three {
+  background-color: #292929; /* Цвет разделителя */
+  margin-top: 200px; /* Отступы сверху и снизу */
+  margin-bottom: -130px;
+}
+.divider-rectangle_three::before {
+  background-color: #292929; /* Цвет для скошенной части (можно изменить) */
+}
+.divider-rectangle_four{
+  height: 200px;
+  background-color: #fff; /* Цвет разделителя */
+  margin-top: -1px; /* Отступы сверху и снизу */
+}
+.divider-rectangle_four::before {
+  background-color: #292929; /* Цвет для скошенной части (можно изменить) */
+}
+.divider-rectangle_five {
+  height: 100px;
+  background-color: #fff; /* Цвет разделителя */
+  position: relative;
+  margin-top: -90px;
+}
+
+.divider-rectangle_five::before {
+  content: '';
+  position: absolute;
+  bottom: -50px; /* Сдвиг скошенной части вниз */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Цвет для скошенной части */
+  transform: skewY(-3deg); /* Это сделает скошенную часть */
+  transform-origin: top; /* Определяет, с какой стороны будет происходить срез */
+}
+.divider-rectangle_six{
+  height: 200px;
+  background-color: #000000; /* Цвет разделителя */
+  margin-top: 150px; /* Отступы сверху и снизу */
+  margin-bottom: -130px;
+}
+.divider-rectangle_six::before {
+  background-color: #000000; /* Цвет для скошенной части (можно изменить) */
 }

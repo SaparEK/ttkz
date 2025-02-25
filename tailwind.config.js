@@ -10,13 +10,18 @@ module.exports = {
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+      padding: {
+        DEFAULT: '1rem', // Отступы по бокам по умолчанию (1rem)
+        sm: '2rem', // Маленькие экраны (отступы по бокам 2rem)
+        md: '3rem', // Средние экраны (отступы по бокам 3rem)
+        lg: '4rem', // Большие экраны (отступы по бокам 4rem)
+        xl: '5rem', // Экстра большие экраны (отступы по бокам 5rem)
       },
     },
     extend: {
+      fontFamily: {
+        hero: 'var(--font-hero)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
