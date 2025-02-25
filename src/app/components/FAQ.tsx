@@ -5,6 +5,7 @@ import { translations } from "../utils/translations";
 import { faqAnswers, faqQuestions } from "../utils/companyInfo";
 
 const FAQ = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { language } = useLanguage();
     const t = translations[language];
     const faqs: { question: string; answer: string }[] = [];

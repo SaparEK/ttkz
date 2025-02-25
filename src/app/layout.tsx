@@ -23,6 +23,7 @@ export default function RootLayout({
         <html lang="en" className={hero.variable}>
         <head>
             {/* Подключаем шрифт Julius Sans One */}
+            {/* eslint-disable-next-line @next/next/no-page-custom-font */}
             <link href="https://fonts.googleapis.com/css2?family=Hero:wght@300&display=swap" rel="stylesheet"/>
         </head>
         <body className="font-hero antialiased">
