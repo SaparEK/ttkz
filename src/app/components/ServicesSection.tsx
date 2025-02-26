@@ -24,7 +24,7 @@ const ServicesSection = () => {
         },
         {
             id: 3,
-            image: "/lovable-uploads/cargo_service_6.jpg",
+            image: "/lovable-uploads/support.jpg",
             title: t.support,
             description: t.supportDesc,
         },

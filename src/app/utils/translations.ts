@@ -78,7 +78,14 @@ export const translations: Translations = {
         services_title:"Our Services",
         send:"Send",
         sending:"Sending...",
-        message_sent:"Message sent"
+        message_sent:"Message sent",
+        textWhyUs:"Why do customers choose us?",
+        why_us_first:"Experience and reliability",
+        why_us_firstDesc:"We have been providing reliable cargo delivery across the CIS for more than 5 years. Our experience is a guarantee of your peace of mind.",
+        why_us_two:"Individual approach",
+        why_us_twoDesc:"We develop customized logistics solutions to meet the needs of each customer.",
+        why_us_three:"Customer reviews",
+        why_us_threeDesc:"Our clients trust us: 95% of our partners continue to cooperate with us on an ongoing basis."
     },
     ru: {
         title: 'TuoTuoKz',
@@ -152,7 +159,14 @@ export const translations: Translations = {
         services_title:"Наши услуги",
         send:"Отправить",
         sending:"Отправляется...",
-        message_sent:"Сообщение отправлено"
+        message_sent:"Сообщение отправлено",
+        textWhyUs:"Почему клиенты выбирают нас?",
+        why_us_first:"Опыт и надежность",
+        why_us_firstDesc:"Более 5 лет мы обеспечиваем надежную доставку грузов по всему СНГ. Наш опыт — это гарантия вашего спокойствия.",
+        why_us_two:"Индивидуальный подход",
+        why_us_twoDesc:"Мы разрабатываем индивидуальные логистические решения, чтобы удовлетворить потребности каждого клиента.",
+        why_us_three:"Отзывы клиентов",
+        why_us_threeDesc:"Наши клиенты доверяют нам: 95% партнеров продолжают сотрудничать с нами на постоянной основе."
     }
 };
 

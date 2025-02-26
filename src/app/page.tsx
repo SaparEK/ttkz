@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Testimonials from "./components/Testimonials";
 import Location from "./components/LocationSection"
+import Why from "./components/Why";
 // import News from "./components/News";
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
                 <HeroSection/>
                 <AboutSection/>
                 <ServicesSection/>
+                <Why/>
                 <Testimonials />
                 <FAQ/>
                 <Location/>

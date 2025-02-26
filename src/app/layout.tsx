@@ -25,6 +25,7 @@ export default function RootLayout({
             {/* Подключаем шрифт Julius Sans One */}
             {/* eslint-disable-next-line @next/next/no-page-custom-font */}
             <link href="https://fonts.googleapis.com/css2?family=Hero:wght@300&display=swap" rel="stylesheet"/>
+            <meta name="keywords" content="TTKZ, TuoTuoKZ, грузовые перевозки Алматы, Tuo Tuo KZ, TUOTUOKZ, ttkz, " />
         </head>
         <body className="font-hero antialiased">
         {children}

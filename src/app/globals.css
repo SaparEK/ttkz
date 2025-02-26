@@ -83,12 +83,12 @@ body {
 }
 /* Разделитель в виде прямоугольника с скошенной стороной */
 .divider-rectangle_three {
-  background-color: #292929; /* Цвет разделителя */
+  background-color: #000; /* Цвет разделителя */
   margin-top: 200px; /* Отступы сверху и снизу */
   margin-bottom: -130px;
 }
 .divider-rectangle_three::before {
-  background-color: #292929; /* Цвет для скошенной части (можно изменить) */
+  background-color: #000; /* Цвет для скошенной части (можно изменить) */
 }
 .divider-rectangle_four{
   height: 200px;
@@ -124,4 +124,12 @@ body {
 }
 .divider-rectangle_six::before {
   background-color: #000000; /* Цвет для скошенной части (можно изменить) */
+}
+.divider-rectangle_seven {
+  background-color: #292929; /* Цвет разделителя */
+  margin-top: 200px; /* Отступы сверху и снизу */
+  margin-bottom: -300px;
+}
+.divider-rectangle_seven::before {
+  background-color: #292929; /* Цвет для скошенной части (можно изменить) */
 }

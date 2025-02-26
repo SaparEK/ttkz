@@ -50,14 +50,14 @@ const Testimonials = () => {
                     {/* Блок с отзывом */}
                     <motion.div
                         key={currentTestimonial}
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -50 }}
-                        transition={{ duration: 0.6 }}
-                        className="relative overflow-hidden bg-forest-light p-6 md:p-12 rounded-xl transition-all duration-300 hover:bg-[#8E9196]/10 hover:translate-y-[-4px] hover:shadow-lg w-full md:w-[70%] lg:w-[60%]"
+                        initial={{opacity: 0, x: 50}}
+                        animate={{opacity: 1, x: 0}}
+                        exit={{opacity: 0, x: -50}}
+                        transition={{duration: 0.6}}
+                        className="relative overflow-hidden bg-forest-light p-6 md:p-12 rounded-xl transition-all duration-300 hover:bg-[#8E9196]/10 hover:translate-y-[-4px] hover:shadow-lg w-full md:w-[80%] lg:w-[70%] xl:w-[95%]"  // Изменения здесь
                     >
-                        <Quote className="text-mint/60 w-6 h-6 md:w-8 md:h-8 mb-4" />
-                        <p className="font-normal mb-4 md:mb-6 text-xl md:text-3xl lg:text-4xl text-white text-left">
+                        <Quote className="text-mint/60 w-6 h-6 md:w-8 md:h-8 mb-4"/>
+                        <p className="mb-4 md:mb-6 text-xl md:text-3xl lg:text-4xl text-white text-left">
                             {testimonials[currentTestimonial].quote}
                         </p>
                         <div className="flex items-center gap-4">
