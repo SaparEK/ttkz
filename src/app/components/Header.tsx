@@ -35,10 +35,11 @@ const Header = () => {
                 }`}
             >
                 <nav className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
-                    {/* Логотип */}
+                    {/* Логотип и заголовок */}
                     <a href="#" className="text-xl font-semibold text-white flex items-center gap-2">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/lovable-uploads/logotype_new_white.png" alt="Logo" className="h-8 md:h-10" />
+                        <img src="/lovable-uploads/eagle.png" alt="Logo" className="h-8 md:h-10" />
+                        <span className="text-lg font-bold">{t("title")}</span>
                     </a>
 
                     {/* Навигация для десктопов */}

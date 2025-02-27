@@ -34,7 +34,7 @@ const ServicesSection = () => {
         <section id="services" className="pb-32  bg-white">
             <div className="container mx-auto px-4 text-center">
                 {/* Заголовок секции */}
-                <motion.h2 className="text-4xl text-black text-left md:text-5xl mb-6">
+                <motion.h2 className="text-4xl text-black text-left md:text-5xl mb-6 ">
                     {t.textServices}
                 </motion.h2>
 
@@ -47,7 +47,7 @@ const ServicesSection = () => {
                             whileInView={{opacity: 1, y: 0}}
                             transition={{duration: 0.6, delay: index * 0.2}}
                             viewport={{once: true}}
-                            className="rounded-lg overflow-hidden"
+                            className="rounded-lg overflow-hidden "
                         >
                             {/* Фото увеличено */}
                             <Image
@@ -56,6 +56,7 @@ const ServicesSection = () => {
                                 width={600}
                                 height={400}
                                 className="w-full h-80 object-cover"
+                                style={{filter:"blur(1px)"}}
                             />
                             {/* Текст теперь без фона */}
                             <div className="pt-6 text-left">

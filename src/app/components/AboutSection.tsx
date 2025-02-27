@@ -25,7 +25,7 @@ const AboutSection = () => {
                         alt="About Us"
                         width={500}
                         height={300}
-                        className="rounded-lg shadow-lg mx-auto"
+                        className="rounded-lg shadow-lg mx-auto filter blur-sm"
                     />
                 </motion.div>
 
@@ -35,7 +35,7 @@ const AboutSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="relative bg-gray-800 text-white p-6 md:p-10 w-[90%] sm:w-[80%] md:w-[55%] lg:w-[50%] xl:w-[45%] z-20 md:ml-[-10%]"
+                    className="relative bg-[#292929] text-white p-6 md:p-10 w-[90%] sm:w-[80%] md:w-[55%] lg:w-[50%] xl:w-[45%] z-20 md:ml-[-10%]"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 tracking-wide">
                         {t.about}

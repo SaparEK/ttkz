@@ -56,6 +56,7 @@ const Why = () => {
                                 width={600}
                                 height={400}
                                 className="w-full h-80 object-cover"
+                                style={{filter:"blur(1px)"}}
                             />
                             {/* Текст */}
                             <div className="pt-6 text-left">

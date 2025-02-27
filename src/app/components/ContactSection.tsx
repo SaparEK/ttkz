@@ -123,20 +123,20 @@ const Contacts = () => {
                     {/* Контакты */}
                     <div className="flex flex-col space-y-6">
                         <a
-                            href="tel:+78001234567"
+                            href="tel:+77010701907"
                             className="glass-card p-8 rounded-xl text-center bg-[#222222] hover:shadow-lg transition-all hover:scale-105"
                         >
                             <Phone className="w-8 h-8 text-accent mx-auto mb-4" />
                             <h3 className="font-semibold text-xl mb-2">{t('phone')}</h3>
-                            <p className="text-neutral-400">+7 777 323 6868</p>
+                            <p className="text-neutral-400">+7 701 070 19 07</p>
                         </a>
                         <a
-                            href="mailto:ttkztuotuokz@gmail.com"
+                            href="mailto:info@tuotuo.kz"
                             className="glass-card p-8 rounded-xl text-center bg-[#222222] hover:shadow-lg transition-all hover:scale-105"
                         >
                             <Mail className="w-8 h-8 text-accent mx-auto mb-4" />
                             <h3 className="font-semibold text-xl mb-2">Email</h3>
-                            <p className="text-neutral-400">ttkztuotuokz@gmail.com</p>
+                            <p className="text-neutral-400">info@tuotuo.kz</p>
                         </a>
                         <div className="glass-card p-8 rounded-xl text-center bg-[#222222] hover:shadow-lg transition-all hover:scale-105">
                             <MessageCircle className="w-8 h-8 text-accent mx-auto mb-4" />

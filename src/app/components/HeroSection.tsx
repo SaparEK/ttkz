@@ -12,7 +12,7 @@ const Hero = () => {
                     alt="Truck Placeholder"
                     layout="fill"
                     objectFit="cover"
-                    className="opacity-80"
+                    className="opacity-80 filter blur-sm"
                 />
             </div>
             <div className="absolute inset-0 bg-black opacity-60"></div>

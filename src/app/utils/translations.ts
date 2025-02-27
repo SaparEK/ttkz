@@ -5,7 +5,7 @@ type Translations = {
 };
 export const translations: Translations = {
     en: {
-        title: 'TuoTuoKz',
+        title: 'TUOTUOKZ',
         title_text: 'Your cargo — in reliable hands',
         location:"Location",
         location_text:"Zharkent, Kazakhstan",
@@ -18,10 +18,7 @@ export const translations: Translations = {
         news:"News",
         contact_text:"We are always in touch and ready to answer your questions.",
         globalLogistics: "Global Logistics",
-        internationalNetwork: "International Network",
         support: "24/7 Support",
-        logisticsDesc: "Comprehensive logistics solutions tailored to your business needs with worldwide coverage.",
-        networkDesc: "Strong partnerships across continents ensuring reliable and efficient delivery services.",
         supportDesc: "Round-the-clock customer support to assist you with any inquiries or concerns.",
         roadFreight: "Road Freight",
         airFreight: "Air Freight",
@@ -88,23 +85,23 @@ export const translations: Translations = {
         why_us_threeDesc:"Our clients trust us: 95% of our partners continue to cooperate with us on an ongoing basis."
     },
     ru: {
-        title: 'TuoTuoKz',
+        title: 'TUOTUOKZ',
         title_text: 'Ваш груз — в надежных руках',
+        subtext: 'Мы обеспечим быструю и безопасную доставку, чтобы ваш бизнес всегда был на ходу.',
+
         location:"Местоположение",
         location_text:"Жаркент, Казахстан",
-        subtext: 'Мы обеспечим быструю и безопасную доставку, чтобы ваш бизнес всегда был на ходу.',
+
         about: "О нас",
         services: "Услуги",
         textServices: "Предоставляемые компанией услуги",
+
         contact: "Контакты",
         feedback:"Обратная связь",
         news:"Новости",
         contact_text:"Мы всегда на связи и готовы ответить на ваши вопросы",
-        globalLogistics: "Глобальная логистика",
-        internationalNetwork: "Международная сеть",
         support: "Поддержка 24/7",
-        logisticsDesc: "Комплексные логистические решения, адаптированные под потребности вашего бизнеса с глобальным охватом.",
-        networkDesc: "Надежные партнерские отношения на всех континентах, обеспечивающие надежные и эффективные услуги доставки.",
+
         supportDesc: "Круглосуточная поддержка клиентов для помощи с любыми вопросами или проблемами.",
         roadFreight: "Автомобильные перевозки",
         warehousing: "Складские услуги",
