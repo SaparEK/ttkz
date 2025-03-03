@@ -149,7 +149,7 @@ const Contacts = () => {
                                     {t('telegram')}
                                 </a>
                                 <a
-                                    href="https://api.whatsapp.com/send?phone=77010701907&text=start"
+                                    href="https://api.whatsapp.com/send?phone=77755549739&text=start"
                                     className="text-neutral-400 hover:text-accent transition-colors"
                                 >
                                     {t('whatsApp')}
