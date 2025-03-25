@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -36,7 +35,7 @@ const Header = () => {
             >
                 <nav className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
                     {/* Логотип и заголовок */}
-                    <a href="#" className="text-xl font-semibold text-white flex items-center gap-2">
+                    <a href="/" className="text-xl font-semibold text-white flex items-center gap-2">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/lovable-uploads/eagle.png" alt="Logo" className="h-8 md:h-10" />
                         <span className="text-lg font-bold">{t("title")}</span>

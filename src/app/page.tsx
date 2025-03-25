@@ -16,7 +16,6 @@ export default function Home() {
         <LanguageProvider>
             <div className="min-h-screen bg-neutral-50 font-hero">
                 <Header/>
-                {/*<Navbar />*/}
                 <HeroSection/>
                 <AboutSection/>
                 <ServicesSection/>
@@ -24,7 +23,6 @@ export default function Home() {
                 <Testimonials />
                 <FAQ/>
                 <Location/>
-                {/*<News/>*/}
                 <ContactSection/>
                 <Footer/>
                 <ChatBot/>

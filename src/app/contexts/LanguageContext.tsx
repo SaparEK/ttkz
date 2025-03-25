@@ -1,7 +1,7 @@
 'use client';
 import React, {createContext, useContext, useState} from 'react';
 
-type Language = 'ru' | 'en';
+type Language = 'ru' | 'en' | 'ch';
 
 import {translations} from "../utils/translations";
 
@@ -17,7 +17,17 @@ export const LanguageProvider = ({children}: { children: React.ReactNode }) => {
     const [language, setLanguage] = useState<Language>('ru');
 
     const t = (key: string): string => {
-        return translations[language][key] || key;
+        const keys = key.split('.');
+        let result: any = translations[language];
+
+        // Рекурсивно ищем вложенные свойства
+        for (const k of keys) {
+            result = result[k];
+            if (result === undefined) break;
+        }
+
+        // Возвращаем найденное значение или исходный ключ
+        return typeof result === 'string' ? result : key;
     };
 
     return (
