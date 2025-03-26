@@ -18,7 +18,7 @@ export const LanguageProvider = ({children}: { children: React.ReactNode }) => {
 
     const t = (key: string): string => {
         const keys = key.split('.');
-        let result: any = translations[language];
+        let result: unknown = translations[language];
 
         // Рекурсивно ищем вложенные свойства
         for (const k of keys) {

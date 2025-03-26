@@ -35,6 +35,7 @@ const Header = () => {
             >
                 <nav className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
                     {/* Логотип и заголовок */}
+                    {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                     <a href="/" className="text-xl font-semibold text-white flex items-center gap-2">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/lovable-uploads/eagle.png" alt="Logo" className="h-8 md:h-10" />

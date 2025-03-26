@@ -1,13 +1,15 @@
 'use client';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import { useLanguage } from "../contexts/LanguageContext";
-import { translations } from "../utils/translations";
+
 import { faqAnswers, faqQuestions } from "../utils/companyInfo";
 
 const FAQ = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { t } = useLanguage();
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { language } = useLanguage();
-    const t = translations[language];
     const faqs: { question: string; answer: string }[] = [];
 
     // Заполняем массив faq
@@ -23,7 +25,7 @@ const FAQ = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 md:mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-4">
-                        {t.faq}
+                        {t("faq")}
                     </h2>
                 </div>
 

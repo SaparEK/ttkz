@@ -1,32 +1,29 @@
 "use client";
 
 import { useLanguage } from "../contexts/LanguageContext";
-import { translations } from "../utils/translations";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Why = () => {
-    const { language } = useLanguage();
-    const t = translations[language];
-
+    const { t } = useLanguage();
     const services = [
         {
             id: 1,
             image: "/lovable-uploads/opit.jpg",
-            title: t.why_us_first,
-            description: t.why_us_firstDesc,
+            title: t("why_us_first"),
+            description: t("why_us_firstDesc"),
         },
         {
             id: 2,
             image: "/lovable-uploads/individual.jpg",
-            title: t.why_us_two,
-            description: t.why_us_twoDesc,
+            title: t("why_us_two"),
+            description: t("why_us_twoDesc"),
         },
         {
             id: 3,
             image: "/lovable-uploads/cargo_service_6.jpg",
-            title: t.why_us_three,
-            description: t.why_us_threeDesc,
+            title: t("why_us_three"),
+            description: t("why_us_threeDesc"),
         },
     ];
 
@@ -35,7 +32,7 @@ const Why = () => {
             <div className="container mx-auto px-4 text-center text-white">
                 {/* Заголовок секции */}
                 <motion.h2 className="text-4xl text-left md:text-5xl mb-6">
-                    {t.textWhyUs}
+                    {t("textWhyUs")}
                 </motion.h2>
 
                 {/* Карточки услуг */}

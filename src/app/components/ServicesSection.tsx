@@ -1,32 +1,31 @@
 "use client";
 
 import { useLanguage } from "../contexts/LanguageContext";
-import { translations } from "../utils/translations";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const ServicesSection = () => {
-    const { language } = useLanguage();
-    const t = translations[language];
+    const { t } = useLanguage();
+
 
     const services = [
         {
             id: 1,
             image: "/lovable-uploads/cargo_service_4.jpg",
-            title: t.warehousing,
-            description: t.warehousingDesc,
+            title: t("warehousing"),
+            description: t("warehousingDesc"),
         },
         {
             id: 2,
             image: "/lovable-uploads/cargo_service_5.jpg",
-            title: t.roadFreight,
-            description: t.roadFreightDesc,
+            title: t("roadFreight"),
+            description: t("roadFreightDesc"),
         },
         {
             id: 3,
             image: "/lovable-uploads/support.jpg",
-            title: t.support,
-            description: t.supportDesc,
+            title: t("support"),
+            description: t("supportDesc"),
         },
     ];
 
@@ -35,7 +34,7 @@ const ServicesSection = () => {
             <div className="container mx-auto px-4 text-center">
                 {/* Заголовок секции */}
                 <motion.h2 className="text-4xl text-black text-left md:text-5xl mb-6 ">
-                    {t.textServices}
+                    {t("textServices")}
                 </motion.h2>
 
                 {/* Карточки услуг */}

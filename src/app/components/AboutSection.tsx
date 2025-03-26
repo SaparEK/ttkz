@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
-import { translations } from "../utils/translations";
 import { companyInfo } from "../utils/companyInfo";
 
 const AboutSection = () => {
+    const { t } = useLanguage();
+
     const { language } = useLanguage();
-    const t = translations[language];
     const c = companyInfo[language];
 
     return (
@@ -38,7 +38,7 @@ const AboutSection = () => {
                     className="relative bg-[#292929] text-white p-6 md:p-10 w-[90%] sm:w-[80%] md:w-[55%] lg:w-[50%] xl:w-[45%] z-20 md:ml-[-10%]"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 tracking-wide">
-                        {t.about}
+                        {t("about")}
                     </h2>
                     <div className="w-24 sm:w-32 h-1 bg-accent mb-6"></div>
                     <p className="text-base sm:text-lg leading-relaxed">

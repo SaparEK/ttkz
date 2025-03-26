@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { useLanguage } from "../contexts/LanguageContext";
+// import { useLanguage } from "../contexts/LanguageContext";
 
 const UserAgreement = () => {
-    const { t } = useLanguage();
+    // const { t } = useLanguage();
     return (
         <div style={{maxWidth: '800px', margin: '0 auto', padding: '20px'}}>
             <h1>Пользовательское Соглашение</h1>
