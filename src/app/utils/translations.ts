@@ -11,6 +11,7 @@ type Translations = {
 export const translations: Translations = {
     en: {
         policy: {
+            name: "Privacy policy",
             title: "Personal data processing policy",
             description: "Please read our personal data processing policy.",
             general_situation: {
@@ -111,6 +112,50 @@ export const translations: Translations = {
                 content_12_3: "The current version of the Policy is freely available on the Internet at https://tuotuo.kz/policy."
             }
         },
+        agreement: {
+            name: "User agreement",
+            heading: {
+                content_1: "This User Agreement regulates the relationship between TUO TUO KZ, TOO (hereinafter tuotuo.kz or Administration) on the one hand and the user of the website on the other.",
+                content_2: "The tuotuo.kz website is not a mass media outlet.",
+                content_3: "By using the website, you agree to the terms of this agreement.",
+                content_4: "If you do not agree with the terms of this agreement, do not use the tuotuo.kz website!"
+            },
+            rights: {
+                name: "Rights and Obligations of the Parties",
+                title_1: {
+                    name: "The User has the right to:",
+                    content_1: "search for information on the website",
+                    content_2: "receive information on the website",
+                    content_3: "use the website information for personal non-commercial purposes"
+                },
+                title_2: {
+                    name: "The Administration has the right to:",
+                    content_1: "at its discretion and as necessary, create, modify, or revoke rules",
+                    content_2: "restrict access to any information on the website"
+                },
+                title_3: {
+                    name: "The User agrees to:",
+                    content_1: "not disrupt the functionality of the website",
+                    content_2: "not use scripts (programs) for automated information collection and/or interaction with the Website and its Services"
+                },
+                title_4: {
+                    name: "The Administration agrees to:",
+                    content_1: "maintain the website’s functionality except in cases where it is impossible due to reasons beyond the Administration’s control."
+                }
+            },
+            responsibility: {
+                name: "Responsibility of the Parties",
+                content_1: "the administration is not responsible for services provided by third parties",
+                content_2: "in the event of a force majeure situation (military actions, emergency situations, natural disasters, etc.), the Administration does not guarantee the preservation of information posted by the User, as well as the uninterrupted operation of the information resource"
+            },
+            condition: {
+                name: "Terms of Agreement Validity",
+                content_1: "This Agreement comes into force upon any use of this website.",
+                content_2: "The Agreement ceases to be in effect upon the release of its new version.",
+                content_3: "The Administration reserves the right to unilaterally amend this agreement at its discretion.",
+                content_4: "The Administration does not notify users of changes to the Agreement."
+            }
+        },
         title: 'TUOTUOKZ',
         title_text: 'Your cargo — in reliable hands',
         location: "Location",
@@ -192,20 +237,21 @@ export const translations: Translations = {
     },
     ru: {
         policy: {
+            name: "Политика конфиденциальности",
             title: 'Политика обработки персональных данных',
             description: 'Ознакомьтесь с нашей политикой обработки персональных данных.',
             general_situation: {
-                title_1:'Общие положения',
-                content_1:'Настоящая политика обработки персональных данных составлена в соответствии с требованиями закона\n' +
+                title_1: 'Общие положения',
+                content_1: 'Настоящая политика обработки персональных данных составлена в соответствии с требованиями закона\n' +
                     'Республики Казахстан от 21 мая 2013 года № 94-V «О персональных данных и их защите» (далее — Закон о\n' +
                     'персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению\n' +
                     'безопасности персональных данных, предпринимаемые TUO TUO KZ, ТОО (далее — Оператор).',
-                content_1_1:'Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение\n' +
+                content_1_1: 'Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение\n' +
                     'прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на\n' +
                     'неприкосновенность частной жизни, личную и семейную тайну.',
-                content_1_2:"Настоящая политика Оператора в отношении обработки персональных данных (далее — Политика)\n" +
+                content_1_2: "Настоящая политика Оператора в отношении обработки персональных данных (далее — Политика)\n" +
                     "применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://tuotuo.kz .",
-                title_2:'Основные понятия, используемые в Политике',
+                title_2: 'Основные понятия, используемые в Политике',
                 content_2_1: 'Автоматизированная обработка персональных данных — обработка персональных данных с помощью\nсредств вычислительной техники.',
                 content_2_2: 'Блокирование персональных данных — временное прекращение обработки персональных данных (за\nисключением случаев, если обработка необходима для уточнения персональных данных).',
                 content_2_3: 'Веб-сайт — совокупность графических и информационных материалов, а также программ для ЭВМ и баз\nданных, обеспечивающих их доступность в сети интернет по сетевому адресу ',
@@ -298,13 +344,49 @@ export const translations: Translations = {
                 content_12_3: 'Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://tuotuo.kz/policy .'
             }
         },
-        agreement:{
-            title_1:'Пользовательское Соглашение',
-            description_1: "Настоящее Пользовательское Соглашение регулирует отношения между TUO TUO KZ, TOO (далее tuotuo.kz или Администрация) с одной стороны и пользователем сайта с другой.",
-            description_2:'Сайт tuotuo.kz не является средством массовой информации.',
-            description_3:'Используя сайт, Вы соглашаетесь с условиями данного соглашения.',
-            description_4:'Если Вы не согласны с условиями данного соглашения, не используйте сайт tuotuo.kz!',
-            title_2:"Права и обязанности сторон",
+        agreement: {
+            name: 'Пользовательское соглашение',
+            heading: {
+                content_1: "Настоящее Пользовательское Соглашение регулирует отношения между TUO TUO KZ, TOO (далее tuotuo.kz или Администрация) с одной стороны и пользователем сайта с другой.",
+                content_2: "Сайт tuotuo.kz не является средством массовой информации.",
+                content_3: 'Используя сайт, Вы соглашаетесь с условиями данного соглашения.',
+                content_4: 'Если Вы не согласны с условиями данного соглашения, не используйте сайт tuotuo.kz!',
+            },
+            rights: {
+                name: "Права и обязанности сторон",
+                title_1: {
+                    name:"Пользователь имеет право:",
+                    content_1:"осуществлять поиск информации на сайте",
+                    content_2:"получать информацию на сайте",
+                    content_3:"использовать информацию сайта в личных некоммерческих целях"
+                },
+                title_2:{
+                    name:"Администрация имеет право:",
+                    content_1:"по своему усмотрению и необходимости создавать, изменять, отменять правила",
+                    content_2:"ограничивать доступ к любой информации на сайте"
+                },
+                title_3:{
+                    name:"Пользователь обязуется:",
+                    content_1:"не нарушать работоспособность сайта",
+                    content_2:"не использовать скрипты (программы) для автоматизированного сбора информаци и/или взаимодействия с Сайтом и его Сервисами"
+                },
+                title_4:{
+                    name:"Администрация обязуется:",
+                    content_1:"поддерживать работоспособность сайта за исключением случаев, когда это невозможно по независящим от Администрации причинам.",
+                }
+            },
+            responsibility:{
+                name:"Ответственность сторон",
+                content_1:"администрация не несет никакой ответственности за услуги, предоставляемые третьими лицами",
+                content_2:"в случае возникновения форс-мажорной ситуации (боевые действия, чрезвычайное положение, стихийное бедствие и т. д.) Администрация не гарантирует сохранность информации, размещённой Пользователем, а также бесперебойную работу информационного ресурса"
+            },
+            condition:{
+                name:"Условие действия Соглашения",
+                content_1:"Данное Соглашение вступает в силу при любом использовании данного сайта.",
+                content_2:"Соглашение перестает действовать при появлении его новой версии.",
+                content_3:"Администрация оставляет за собой право в одностороннем порядке изменять данное соглашение по своему усмотрению.",
+                content_4:"Администрация не оповещает пользователей об изменении в Соглашении."
+            }
         },
         title: 'TUOTUOKZ',
         title_text: 'Ваш груз — в надежных руках',
@@ -386,8 +468,9 @@ export const translations: Translations = {
         why_us_three: "Отзывы клиентов",
         why_us_threeDesc: "Наши клиенты доверяют нам: 95% партнеров продолжают сотрудничать с нами на постоянной основе.",
     },
-    ch:{
+    ch: {
         policy: {
+            name: "私隐政策",
             title: "用户协议",
             description: "请查阅我们的个人数据处理政策。",
             general_situation: {
@@ -486,6 +569,50 @@ export const translations: Translations = {
                 content_12_1: "用户可以通过电子邮件info@tuotuo.kz联系运营商，获得有关其个人数据处理的任何疑问的澄清。",
                 content_12_2: "本文件将反映运营商个人数据处理政策的任何变化。该政策无限期有效，直至被新版本取代。",
                 content_12_3: "本政策的最新版本可在互联网上免费获取，网址为 https://tuotuo.kz/policy。"
+            }
+        },
+        agreement: {
+            name: "用户协议",
+            heading: {
+                content_1: "本用户协议规范了TUO TUO KZ, TOO（以下简称 tuotuo.kz 或 管理方）与网站用户之间的关系。",
+                content_2: "tuotuo.kz 网站不是一个大众媒体平台。",
+                content_3: "使用本网站即表示您同意本协议的条款。",
+                content_4: "如果您不同意本协议的条款，请不要使用 tuotuo.kz 网站！"
+            },
+            rights: {
+                name: "双方的权利与义务",
+                title_1: {
+                    name: "用户有权：",
+                    content_1: "在网站上搜索信息",
+                    content_2: "在网站上获取信息",
+                    content_3: "将网站信息用于个人非商业用途"
+                },
+                title_2: {
+                    name: "管理方有权：",
+                    content_1: "根据自身判断和需要创建、修改或废除规则",
+                    content_2: "限制对网站上任何信息的访问"
+                },
+                title_3: {
+                    name: "用户同意：",
+                    content_1: "不得破坏网站的正常运行",
+                    content_2: "不得使用脚本（程序）自动收集信息和/或与网站及其服务进行交互"
+                },
+                title_4: {
+                    name: "管理方同意：",
+                    content_1: "维护网站的正常运行，除非由于不可控因素导致无法实现。"
+                }
+            },
+            responsibility: {
+                name: "双方的责任",
+                content_1: "管理方不对第三方提供的服务承担任何责任。",
+                content_2: "在发生不可抗力（如战争、紧急情况、自然灾害等）时，管理方不保证用户发布的信息能够被保存，也不保证信息资源的不间断运行。"
+            },
+            condition: {
+                name: "协议的生效条件",
+                content_1: "本协议在用户使用本网站的任何时间生效。",
+                content_2: "当新版本发布时，本协议自动终止。",
+                content_3: "管理方保留自行决定单方面修改本协议的权利。",
+                content_4: "管理方不会通知用户本协议的变更。"
             }
         },
         title: 'TUOTUOKZ',
